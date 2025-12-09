@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "AlternateGotNo3D";
+  src:
+    local("AlternateGotNo3D"),
+    url("./fonts/Alternate/AlternateGotNo3D.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "AlternateGotNo2D";
+  src:
+    local("AlternateGotNo2D"),
+    url("./fonts/Alternate/AlternateGotNo2D.ttf") format('TrueType');
+}
+
+@font-face {
+  font-family: "VulfSansLight";
+  src:
+    local("VulfSansLight"),
+    url("./fonts/Vulf/VulfSans-Light.ttf") format('TrueType'),
+}
+
+@font-face {
+  font-family: "VulfSansRegular";
+  src:
+    local("VulfSansRegular"),
+    url("./fonts/Vulf/VulfSans-Regular.ttf") format('TrueType'),
+}
+
+body, * {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2 {
+  font-family: 'AlternateGotNo3D';
+}
+
+h3 {
+  font-family: 'AlternateGotNo2D';
+}
+
+.AGN3D-Font {
+  font-family: 'AlternateGotNo3D';
+}
+
+.AGN2D-Font {
+  font-family: 'AlternateGotNo2D';
+}
+
+.VSL-Font {
+  font-family: 'VulfSansLight';
+}
+
+.VSR-Font {
+  font-family: 'VulfSansRegular';
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background-color: #FFC248;
+  color: white !important;
+  padding: 10px;
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.swiper-button-next {
+  right: 10px !important;
+}
+
+.swiper-button-prev {
+  left: 10px !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
