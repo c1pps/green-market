@@ -12,7 +12,7 @@ export default function Nav() {
                 </div>
             </div>
             <nav className="bg-[#FFC248]">
-                <ul className="flex items-center justify-center gap-[50px] py-[12px] AGN3D-Font uppercase text-[48px]">
+                <ul className="flex items-center justify-center gap-[20px] md:gap-[50px] py-[12px] AGN3D-Font uppercase text-[30px] md:text-[48px]">
                     <li>
                         <Link to="/" className="group text-black transition-all duration-300 ease-in-out">
                             <span className="bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_3px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all duration-300 ease-in-out"> Accueil</span>

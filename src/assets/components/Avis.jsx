@@ -5,9 +5,17 @@ import 'swiper/css';
 
 export default function Avis() {
     return (
-        <Swiper spaceBetween={130} slidesPerView={2}>
+        <Swiper
+            spaceBetween={40}
+            slidesPerView={2.3}
+            breakpoints={{
+                0: { slidesPerView: 1.3, spaceBetween: 16 },
+                768: { slidesPerView: 2.3, spaceBetween: 32 },
+                1280: { slidesPerView: 2.3, spaceBetween: 40 },
+            }}
+        >
             <SwiperSlide>
-                <div className='flex flex-col gap-[10px] justify-between p-[25px] bg-black text-white h-[320px] w-[700px]'>
+                <div className='flex flex-col gap-[10px] justify-between p-[25px] bg-black text-white h-max w-full md:max-w-[540px] mx-auto'>
                     <div>
                         <div className="flex gap-[10px] mb-[10px]">
                             <RiStarFill size={30} color='#FFC248'></RiStarFill>
@@ -16,16 +24,16 @@ export default function Avis() {
                             <RiStarFill size={30} color='#FFC248'></RiStarFill>
                             <RiStarFill size={30} color='#FFC248'></RiStarFill>
                         </div>
-                        <h4 className='uppercase AGN3D-Font text-[30px]'>Sophie Durand</h4>
+                        <h4 className='uppercase AGN3D-Font text-[24px] md:text-[30px]'>Sophie Durand</h4>
                     </div>
                     <div>
-                        <p className='VSR-Font text-[20px] uppercase'>Une expérience d'achat qui a du sens</p>
-                        <p className='VSL-Font uppercase'>“Depuis que j'ai découvert GreenMarket, je ne commande plus mes produits écologiques ailleurs ! La sélection est soignée, les descriptions sont claires, et j'apprécie particulièrement la transparence sur l'origine des produits. Le site est fluide et agréable à utiliser. Enfin une plateforme qui allie consommation responsable et expérience utilisateur moderne !”</p>
+                        <p className='VSR-Font text-[16px] md:text-[20px] uppercase leading-5 md:leading-6 mb-[0.5rem] md:mb-0'>Une expérience d'achat qui a du sens</p>
+                        <p className='VSL-Font text-[14px] md:text-[16px] uppercase'>“Depuis que j'ai découvert GreenMarket, je ne commande plus mes produits écologiques ailleurs ! La sélection est soignée, les descriptions sont claires, et j'apprécie particulièrement la transparence sur l'origine des produits. Le site est fluide et agréable à utiliser. Enfin une plateforme qui allie consommation responsable et expérience utilisateur moderne !”</p>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className='flex flex-col gap-[10px] justify-between p-[25px] bg-black text-white h-[320px] w-[700px]'>
+                <div className='flex flex-col gap-[10px] justify-between p-[25px] bg-black text-white h-max w-full max-w-[540px] mx-auto'>
                     <div>
                         <div className="flex gap-[10px] mb-[10px]">
                             <RiStarFill size={30} color='#FFC248'></RiStarFill>
@@ -43,7 +51,7 @@ export default function Avis() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className='flex flex-col gap-[10px] justify-between p-[25px] bg-black text-white h-[320px] w-[700px]'>
+                <div className='flex flex-col gap-[10px] justify-between p-[25px] bg-black text-white w-full max-w-[540px] mx-auto'>
                     <div>
                         <div className="flex gap-[10px] mb-[10px]">
                             <RiStarFill size={30} color='#FFC248'></RiStarFill>

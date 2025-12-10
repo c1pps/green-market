@@ -20,7 +20,8 @@ export default function ALaUne() {
         }
         const result = await response.json();
         setData(result);
-      } catch (err) {
+      } catch {
+        setError(true)
         return <Error></Error>;
       } finally {
         setLoading(false);
@@ -31,10 +32,14 @@ export default function ALaUne() {
     }, []);
 
     if (loading) return <Loading></Loading>;
-    if (error) return <Error></Error>;
+    if(error) return <Error></Error>;
 
     return (
-        <Swiper spaceBetween={50} slidesPerView={3.3}>
+        <Swiper spaceBetween={50} slidesPerView={3.3} breakpoints={{
+                0: { slidesPerView: 1.3, },
+                768: { slidesPerView: 2.3, },
+                1280: { slidesPerView: 3.3, },
+            }}>
             {data && data.slice(0, 7).map(products => (
                 <SwiperSlide key={products.id}>
                   <Link to={`/produit/${products.id}`}>
@@ -43,7 +48,7 @@ export default function ALaUne() {
                             <img className='block w-full h-full object-cover transition-transform duration-300 ease-in-out transform-gpu group-hover:scale-105' src={products.image} alt={`Image de ${products.title}`} />
                         </div>
                         <div
-                          className={`absolute top-10 right-[3px] z-10 AGN3D-Font uppercase text-[28px] px-[15px] py-[2px]
+                          className={`absolute top-10 right-[3px] z-10 AGN3D-Font uppercase text-[18px] md:text-[28px] px-[10px] md:px-[15px] py-[2px]
                           ${(products.category === "women's clothing" || products.category === "men's clothing") ? "bg-[#FFC248]" :
                            products.category === "jewelery" ? "bg-[#70C4EF]" :
                            products.category === "electronics" ? "bg-[#61D07D]" : "bg-white"}`}>
@@ -53,8 +58,8 @@ export default function ALaUne() {
                            products.category === "electronics" ? "éléctroniques" : "autre"}
                         </div>
                     </div>
-                    <h3 className='text-[40px] uppercase leading-11 mb-[3rem] truncate'>{products.title}</h3>
-                    <p className='AGN2D-Font text-[30px] px-[15px] py-[2px] bg-[#FFC248] inline-block'>${products.price}</p>
+                    <h3 className='text-[20px] md:text-[40px] uppercase leading-6 md:leading-11 mb-[2rem] md:mb-[3rem] truncate'>{products.title}</h3>
+                    <p className='AGN2D-Font text-[18px] md:text-[30px] px-[10px] md:px-[15px] py-[2px] bg-[#FFC248] inline-block'>${products.price}</p>
                     <p className='VSL-Font uppercase border-t border-t-5 border-[#FFC248] pt-[5px] truncate'>{products.description}</p>
                   </Link>
                 </SwiperSlide>
