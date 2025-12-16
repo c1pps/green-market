@@ -28,14 +28,14 @@ export default function Home() {
                         <Link to="/produits" className='AGN3D-Font text-[20px] md:text-[36px] border border-2 md:border-3 border-black bg-transparent px-[10px] md:px-[20px] py-[8px] md:py-[10px] hover:bg-black hover:text-white transition duration-300 ease-in-out'>Découvrir les produits</Link>
                     </div>
                 </div>
-                <div className='mb-[120px] ms-[20px] md:mx-[400px]'>
+                <div className='mb-[120px] ms-[20px] md:mx-[400px]' id='selection'>
                     <div className='flex justify-between mb-[20px] uppercase'>
                         <h2 className='text-[32px] md:text-[64px]'>_ notre séléction</h2>
                         {/* <Link to="/produits" className="AGN3D-Font text-[64px] group text-black transition-all duration-300 ease-in-out"><span className="bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] transition-all duration-300 ease-in-out">_ Les autres</span></Link> */}
                     </div>
                     <ALaUne></ALaUne>
                 </div>
-                <div>
+                <div id='avis'>
                     <div className='uppercase bg-[#FFC248] ps-[20px] md:px-[400px] py-[40px]'>
                         <h2 className='text-[32px] md:text-[64px] mb-[20px]'>_ ils en pensent quoi ?</h2>
                         <Avis></Avis>

@@ -40,7 +40,7 @@ export default function ALaUne() {
                 768: { slidesPerView: 2.3, },
                 1280: { slidesPerView: 3.3, },
             }}>
-            {data && data.slice(0, 7).map(products => (
+            {data.slice(0, 7).map(products => (
                 <SwiperSlide key={products.id}>
                   <Link to={`/produit/${products.id}`}>
                     <div className='relative inline-block w-full h-[480px] mx-auto group'>
@@ -53,9 +53,10 @@ export default function ALaUne() {
                            products.category === "jewelery" ? "bg-[#70C4EF]" :
                            products.category === "electronics" ? "bg-[#61D07D]" : "bg-white"}`}>
 
-                          {(products.category === "women's clothing" || products.category === "men's clothing") ? "vêtements" :
-                           products.category === "jewelery" ? "bijoux" :
-                           products.category === "electronics" ? "éléctroniques" : "autre"}
+                          {(products.category === "men's clothing") ? "vêtements homme" :
+                          products.category === "women's clothing" ? "vêtements femme" :
+                          products.category === "jewelery" ? "bijoux" :
+                          products.category === "electronics" ? "éléctroniques" : "autre"}
                         </div>
                     </div>
                     <h3 className='text-[20px] md:text-[40px] uppercase leading-6 md:leading-11 mb-[2rem] md:mb-[3rem] truncate'>{products.title}</h3>
